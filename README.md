@@ -5,4 +5,3 @@ NUS offers more than 160 undergraduate degree programs (associate's and bachelor
 Studying at NUS is quite competitive. NUS students are vocational high school graduates who must compete over the seats available in all branches, in a national entrance exam every year.
 NUS has already employed more than 800 faculty members, 500 full time lecturers, 4.000 staff and 19.000 visiting professors. 
 
-
