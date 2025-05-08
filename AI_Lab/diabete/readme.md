@@ -40,30 +40,7 @@
      - عمق درخت به حد مجاز برسد.
      - تعداد داده‌ها در یک گره کمتر از حد آستانه باشد.
 
----
 
-### **معیارهای تقسیم‌بندی**
-1. **Entropy و Information Gain:**
-   - Entropy میزان عدم قطعیت در داده‌ها را نشان می‌دهد.
-   - Information Gain میزان کاهش Entropy پس از تقسیم داده‌ها را محاسبه می‌کند:
-     \[
-     IG(T, a) = Entropy(T) - \sum_{v \in Values(a)} \frac{|T_v|}{|T|} Entropy(T_v)
-     \]
-
-2. **Gini Index:**
-   - Gini Index میزان ناهمگونی در داده‌ها را اندازه‌گیری می‌کند:
-     \[
-     Gini(T) = 1 - \sum_{i=1}^{n} p_i^2
-     \]
-     که \(p_i\) احتمال تعلق داده‌ها به کلاس \(i\) است.
-
-3. **Gain Ratio:**
-   - Gain Ratio برای حل مشکل Skewness در Information Gain استفاده می‌شود:
-     \[
-     Gain\ Ratio = \frac{IG(T, a)}{Split\ Information(a)}
-     \]
-
----
 
 ### **مزایای درخت تصمیم**
 1. **قابلیت تفسیر:**
