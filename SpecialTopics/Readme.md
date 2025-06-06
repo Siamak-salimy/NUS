@@ -8,7 +8,6 @@ Bioinformatics is an interdisciplinary field that combines biology, computer sci
    - **Metagenomics**: Studying genetic material from environmental samples to analyze microbial communities and their functions.
 
 ---
-
 ### 2. **Transcriptomics and RNA-Seq Analysis**
    - **Gene Expression Profiling**: Using RNA sequencing (RNA-Seq) to measure gene expression levels and identify differentially expressed genes.
    - **Alternative Splicing Analysis**: Investigating how different mRNA isoforms are produced from the same gene.
