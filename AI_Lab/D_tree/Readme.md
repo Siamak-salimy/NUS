@@ -1,5 +1,5 @@
-Decision Tree Classifier for Diabetes Prediction
-
+Decision Tree Classifier for Diabetes Prediction  ( DTC ) </br>
+ 
 This repository contains Python code for implementing a Decision Tree–based diagnostic model for predicting diabetes using clinical features from the Pima Indians Diabetes Dataset. The workflow includes data retrieval from GitHub, pre-processing, model training, evaluation, and prediction for new samples. The implementation uses entropy-based splitting to approximate C4.5/C5.0 behavior.
 
 1. Overview
