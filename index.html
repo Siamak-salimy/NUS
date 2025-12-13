@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دانشگاه ملی مهارت (NUS) | National University of Skill</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #e74c3c;
+            --accent-color: #3498db;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --success-color: #27ae60;
+            --warning-color: #f39c12;
+            --gradient-primary: linear-gradient(135deg, #2c3e50 0%, #4a6491 100%);
+            --gradient-secondary: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            --gradient-accent: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);
+            --shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            --border-radius: 12px;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.7;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo img {
+            height: 60px;
+            width: auto;
+            border-radius: 50%;
+            border: 3px solid white;
+            padding: 5px;
+            background: white;
+        }
+        
+        .logo-text h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .logo-text p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            padding: 8px 15px;
+            border-radius: 30px;
+        }
+        
+        .nav-links a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: var(--gradient-accent);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none"/><circle cx="50" cy="50" r="40" fill="white" opacity="0.05"/></svg>');
+            background-size: 150px;
+        }
+        
+        .hero-content h2 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+        
+        .hero-content p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            opacity: 0.95;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .stat-item {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            min-width: 180px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease;
+        }
+        
+        .stat-item:hover {
+            transform: translateY(-10px);
+        }
+        
+        .stat-item i {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        .stat-number {
+            font-size: 2.2rem;
+            font-weight: 800;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 1rem;
+            margin-top: 5px;
+            opacity: 0.9;
+        }
+        
+        /* Content Sections */
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            right: 50%;
+            transform: translateX(50%);
+            width: 80px;
+            height: 4px;
+            background: var(--secondary-color);
+            border-radius: 2px;
+        }
+        
+        .section-title p {
+            color: #666;
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 20px auto 0;
+        }
+        
+        .content-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 40px;
+            box-shadow: var(--shadow);
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+        
+        .content-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .content-card h3 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--light-color);
+        }
+        
+        .content-card p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #555;
+        }
+        
+        .content-card ul {
+            padding-right: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .content-card li {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            position: relative;
+        }
+        
+        .content-card li i {
+            color: var(--success-color);
+            margin-left: 10px;
+        }
+        
+        .language-toggle {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        
+        .lang-btn {
+            background: white;
+            border: 2px solid var(--accent-color);
+            color: var(--accent-color);
+            padding: 12px 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .lang-btn:first-child {
+            border-radius: 30px 0 0 30px;
+            border-left: 2px solid var(--accent-color);
+        }
+        
+        .lang-btn:last-child {
+            border-radius: 0 30px 30px 0;
+            border-right: 2px solid var(--accent-color);
+        }
+        
+        .lang-btn.active {
+            background: var(--accent-color);
+            color: white;
+        }
+        
+        .lang-content {
+            display: none;
+        }
+        
+        .lang-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Facts Section */
+        .facts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .fact-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 30px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            border-top: 5px solid var(--secondary-color);
+            transition: all 0.3s ease;
+        }
+        
+        .fact-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .fact-card i {
+            font-size: 3rem;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+        }
+        
+        .fact-card h4 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 60px 0 30px;
+            margin-top: 60px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h4 {
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-column h4::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--secondary-color);
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 15px;
+        }
+        
+        .footer-column ul li a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-column ul li a:hover {
+            color: white;
+            padding-right: 10px;
+        }
+        
+        .footer-column p {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 15px;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            background: var(--secondary-color);
+            transform: translateY(-5px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .nav-links {
+                gap: 15px;
+            }
+            
+            .hero-content h2 {
+                font-size: 2.3rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2.2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+            
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .hero-content h2 {
+                font-size: 2rem;
+            }
+            
+            .hero-content p {
+                font-size: 1.1rem;
+            }
+            
+            .stat-item {
+                min-width: 140px;
+                padding: 20px;
+            }
+            
+            .content-card {
+                padding: 30px 20px;
+            }
+            
+            .section-title h2 {
+                font-size: 1.9rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .mobile-menu-btn {
+                display: block;
+                position: absolute;
+                top: 25px;
+                left: 20px;
+            }
+            
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                margin-top: 20px;
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .nav-links a {
+                width: 100%;
+                text-align: center;
+                padding: 15px;
+            }
+            
+            .hero {
+                padding: 80px 0;
+            }
+            
+            .hero-content h2 {
+                font-size: 1.8rem;
+            }
+            
+            .stats {
+                gap: 15px;
+            }
+            
+            .stat-item {
+                min-width: calc(50% - 15px);
+                padding: 15px;
+            }
+            
+            .lang-btn {
+                padding: 10px 20px;
+                font-size: 1rem;
+            }
+            
+            section {
+                padding: 60px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <!-- لوگوی دانشگاه - از آیکون استفاده شده -->
+                <div style="height: 60px; width: 60px; border-radius: 50%; border: 3px solid white; padding: 5px; background: white; display: flex; align-items: center; justify-content: center; color: var(--primary-color); font-size: 1.8rem; font-weight: bold;">
+                    NUS
+                </div>
+                <div class="logo-text">
+                    <h1>دانشگاه ملی مهارت</h1>
+                    <p>National University of Skill (NUS)</p>
+                </div>
+            </div>
+            
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav class="nav-links">
+                <a href="#about">درباره دانشگاه</a>
+                <a href="#mission">ماموریت و چشم‌انداز</a>
+                <a href="#facts">آمار و ارقام</a>
+                <a href="#contact">تماس با ما</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h2>دانشگاه ملی مهارت (NUS)</h2>
+            <p>مرکز تعالی در آموزش فنی و حرفه‌ای و توسعه مهارت</p>
+            
+            <div class="stats">
+                <div class="stat-item">
+                    <i class="fas fa-university"></i>
+                    <span class="stat-number">180+</span>
+                    <span class="stat-label">شعبه در کشور</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span class="stat-number">200,000</span>
+                    <span class="stat-label">دانشجو</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-book-open"></i>
+                    <span class="stat-number">160+</span>
+                    <span class="stat-label">رشته تحصیلی</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <span class="stat-number">800+</span>
+                    <span class="stat-label">عضو هیئت علمی</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>درباره دانشگاه ملی مهارت</h2>
+                <p>دانشگاهی پیشرو در حوزه آموزش فنی و حرفه‌ای با بیش از 180 شعبه در سراسر ایران</p>
+            </div>
+            
+            <div class="language-toggle">
+                <button class="lang-btn active" data-lang="fa">فارسی</button>
+                <button class="lang-btn" data-lang="en">English</button>
+            </div>
+            
+            <div class="lang-content active" id="fa-content">
+                <div class="content-card">
+                    <h3>دانشگاه ملی مهارت (NUS)</h3>
+                    <p>دانشگاه ملی مهارت (NUS) که قبلاً به عنوان دانشگاه فنی و حرفه‌ای شناخته می‌شد، یک دانشگاه جامع دولتی است که به وزارت علوم، تحقیقات و فناوری ایران وابسته است. دفتر مرکزی NUS در تهران، ایران مستقر است و بیش از 180 شعبه در سراسر کشور مدیریت می‌کند.</p>
+                    
+                    <p>NUS بیش از 160 برنامه مقطع کارشناسی (مدرک کاردانی و کارشناسی) را به تقریباً 200,000 دانشجو ارائه می‌دهد. تمرکز اصلی بر آموزش و آموزش فنی و حرفه‌ای (TVET) و توسعه مهارت است. دوره‌های NUS برای تحقق تقاضای بازار برای تکنسین‌ها و مهندسان بسیار ماهر متناسب است.</p>
+                    
+                    <p>تقریباً 70٪ از این دوره‌ها عملاً در کارگاه‌های مجهز آموزش داده می‌شوند و 30٪ باقیمانده به صورت تئوری در کلاس‌های هوشمند آموزش داده می‌شوند. تحصیل در NUS کاملاً رقابتی است. دانشجویان NUS فارغ‌التحصیلان دبیرستان‌های فنی و حرفه‌ای هستند که باید هر سال در یک امتحان ورودی ملی، برای صندلی‌های موجود در همه شعب رقابت کنند.</p>
+                    
+                    <p>NUS در حال حاضر بیش از 800 عضو هیئت علمی، 500 مدرس تمام‌وقت، 4,000 کارمند و 19,000 استاد مدعو را به کار گرفته است.</p>
+                </div>
+            </div>
+            
+            <div class="lang-content" id="en-content">
+                <div class="content-card">
+                    <h3>National University of Skill (NUS)</h3>
+                    <p>The National University of Skill (NUS) formerly known as the Technical and Vocational University, is a state comprehensive university, affiliated to Ministry of Science, Research and Technology of Iran. NUS headquarters is based in Tehran, Iran, and it manages more than 180 branches across the country.</p>
+                    
+                    <p>NUS offers more than 160 undergraduate degree programs (associate's and bachelor's degrees) to almost 200,000 students. The main focus is on technical and vocational education and training (TVET) and Skill Development. NUS courses are tailored to fulfill the market demands for highly skilled technicians and engineers.</p>
+                    
+                    <p>Almost 70% of these courses are instructed practically in well-equipped workrooms and the remaining 30% are taught theoretically in smart classrooms. Studying at NUS is quite competitive. NUS students are vocational high school graduates who must compete over the seats available in all branches, in a national entrance exam every year.</p>
+                    
+                    <p>NUS has already employed more than 800 faculty members, 500 full time lecturers, 4,000 staff and 19,000 visiting professors.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section id="mission" style="background-color: #f8f9fa;">
+        <div class="container">
+            <div class="section-title">
+                <h2>ماموریت و چشم‌انداز</h2>
+                <p>اهداف و برنامه‌های راهبردی دانشگاه ملی مهارت</p>
+            </div>
+            
+            <div class="facts-grid">
+                <div class="fact-card">
+                    <i class="fas fa-bullseye"></i>
+                    <h4>ماموریت</h4>
+                    <p>آموزش نیروی انسانی ماهر و متخصص متناسب با نیازهای بازار کار و صنعت کشور</p>
+                </div>
+                
+                <div class="fact-card">
+                    <i class="fas fa-eye"></i>
+                    <h4>چشم‌انداز</h4>
+                    <p>تبدیل شدن به دانشگاه پیشرو در حوزه آموزش‌های مهارتی در سطح منطقه</p>
+                </div>
+                
+                <div class="fact-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h4>تمرکز اصلی</h4>
+                    <p>آموزش فنی و حرفه‌ای (TVET) و توسعه مهارت‌های کاربردی</p>
+                </div>
+                
+                <div class="fact-card">
+                    <i class="fas fa-handshake"></i>
+                    <h4>همکاری با صنعت</h4>
+                    <p>ارتباط مستمر با صنایع برای به روزرسانی محتوای آموزشی</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facts Section -->
+    <section id="facts">
+        <div class="container">
+            <div class="section-title">
+                <h2>آمار و ارقام کلیدی</h2>
+                <p>برخی از مهمترین آمارهای دانشگاه ملی مهارت</p>
+            </div>
+            
+            <div class="content-card">
+                <h3>داده‌های آماری دانشگاه</h3>
+                
+                <div class="facts-grid">
+                    <div class="fact-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h4>شعب دانشگاه</h4>
+                        <p>بیش از 180 شعبه در سراسر ایران</p>
+                    </div>
+                    
+                    <div class="fact-card">
+                        <i class="fas fa-user-graduate"></i>
+                        <h4>تعداد دانشجویان</h4>
+                        <p>نزدیک به 200,000 دانشجو</p>
+                    </div>
+                    
+                    <div class="fact-card">
+                        <i class="fas fa-book"></i>
+                        <h4>رشته‌های تحصیلی</h4>
+                        <p>بیش از 160 رشته در مقاطع کاردانی و کارشناسی</p>
+                    </div>
+                    
+                    <div class="fact-card">
+                        <i class="fas fa-users"></i>
+                        <h4>هیئت علمی و کارکنان</h4>
+                        <p>800 عضو هیئت علمی، 500 مدرس تمام‌وقت، 4,000 کارمند</p>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 30px;">
+                    <h4>ویژگی‌های منحصر به فرد:</h4>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> 70% آموزش عملی در کارگاه‌های مجهز</li>
+                        <li><i class="fas fa-check-circle"></i> 30% آموزش تئوری در کلاس‌های هوشمند</li>
+                        <li><i class="fas fa-check-circle"></i> پذیرش از طریق آزمون سراسری رقابتی</li>
+                        <li><i class="fas fa-check-circle"></i> ارتباط قوی با صنعت و بازار کار</li>
+                        <li><i class="fas fa-check-circle"></i> تاکید بر مهارت‌آموزی و اشتغال‌پذیری</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>ارتباط با ما</h4>
+                    <p><i class="fas fa-map-marker-alt" style="margin-left: 10px;"></i> تهران، دفتر مرکزی دانشگاه ملی مهارت</p>
+                    <p><i class="fas fa-phone" style="margin-left: 10px;"></i> تلفن: ۰۲۱-۱۲۳۴۵۶۷۸</p>
+                    <p><i class="fas fa-envelope" style="margin-left: 10px;"></i> ایمیل: info@nus.ac.ir</p>
+                    
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>لینک‌های مفید</h4>
+                    <ul>
+                        <li><a href="#">آزمون سراسری</a></li>
+                        <li><a href="#">رشته‌های تحصیلی</a></li>
+                        <li><a href="#">شرایط پذیرش</a></li>
+                        <li><a href="#">اخبار دانشگاه</a></li>
+                        <li><a href="#">تماس با شعب</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>درباره NUS</h4>
+                    <p>دانشگاه ملی مهارت (NUS) با هدف تربیت نیروی انسانی ماهر و متخصص برای بازار کار ایران تاسیس شده است. این دانشگاه با بیش از 180 شعبه در سراسر کشور، بزرگترین مرکز آموزش فنی و حرفه‌ای در ایران محسوب می‌شود.</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>تمامی حقوق مادی و معنوی این وبسایت متعلق به دانشگاه ملی مهارت (NUS) می‌باشد. © ۲۰۲۳</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Language Toggle
+        const langButtons = document.querySelectorAll('.lang-btn');
+        const faContent = document.getElementById('fa-content');
+        const enContent = document.getElementById('en-content');
+        
+        langButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                langButtons.forEach(btn => btn.classList.remove('active'));
+                
+                // Add active class to clicked button
+                button.classList.add('active');
+                
+                // Show corresponding content
+                if (button.dataset.lang === 'fa') {
+                    faContent.classList.add('active');
+                    enContent.classList.remove('active');
+                } else {
+                    faContent.classList.remove('active');
+                    enContent.classList.add('active');
+                }
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    // Close mobile menu if open
+                    navLinks.classList.remove('active');
+                    mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
