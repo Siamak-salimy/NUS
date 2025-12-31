@@ -5,7 +5,6 @@ NUS offers more than 160 undergraduate degree programs (associate's and bachelor
 Studying at NUS is quite competitive. NUS students are vocational high school graduates who must compete over the seats available in all branches, in a national entrance exam every year.
 NUS has already employed more than 800 faculty members, 500 full time lecturers, 4.000 staff and 19.000 visiting professors. </br>
 
-
 دانشگاه ملی مهارت (NUS) که قبلاً به عنوان دانشگاه فنی و حرفه ای شناخته می شد ، یک دانشگاه جامع دولتی است که به وزارت تحقیقات و فناوری علوم ایران وابسته است.
 دفتر مرکزی NUS در تهران ، ایران مستقر است و بیش از 180 شعبه در سراسر کشور مدیریت می کند.
 NUS بیش از 160 برنامه مقطع کارشناسی (مدرک Associate و Bachelor) را به تقریباً 200.000 دانش آموز ارائه می دهد. تمرکز اصلی بر آموزش و آموزش فنی و حرفه ای (TVET) و توسعه مهارت است. دوره های NUS برای تحقق تقاضای بازار برای تکنسین ها و مهندسان بسیار ماهر متناسب است. تقریبا 70 ٪ از این دوره ها عملاً در اتاق های مجهز مجهز آموزش داده می شوند و 30 ٪ باقیمانده از نظر تئوری در کلاسهای هوشمند آموزش داده می شوند.
