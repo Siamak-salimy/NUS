@@ -2,7 +2,6 @@
 
 **Data mining** is the process of discovering patterns, correlations, trends, and useful information from large datasets using methods at the intersection of statistics, machine learning, and database systems. Think of it as **extracting valuable "nuggets" of knowledge** from vast amounts of raw data.
 ---
-
 ## Analogy
 Imagine you're panning for gold in a river. The river is your **massive dataset**, and the gold flakes you find are the **valuable insights**. Data mining provides the tools and techniques to sift through the dirt and rocks (irrelevant data) to find those precious pieces.
 
