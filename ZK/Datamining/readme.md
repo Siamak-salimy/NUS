@@ -6,7 +6,6 @@
 Imagine you're panning for gold in a river. The river is your **massive dataset**, and the gold flakes you find are the **valuable insights**. Data mining provides the tools and techniques to sift through the dirt and rocks (irrelevant data) to find those precious pieces.
 
 ---
-
 ## Key Goals of Data Mining:
 1. **Pattern Discovery** – Find hidden relationships (e.g., "customers who buy X also buy Y").
 2. **Prediction** – Forecast future trends or behaviors (e.g., sales forecasting).
