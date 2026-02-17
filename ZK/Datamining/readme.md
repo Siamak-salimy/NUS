@@ -13,7 +13,6 @@ Imagine you're panning for gold in a river. The river is your **massive dataset*
 5. **Anomaly Detection** – Identify unusual records (e.g., fraud detection).
 
 ---
-
 ## Common Techniques:
 - **Association Rule Learning** (Market Basket Analysis) – Finds rules like "If A, then B."
 - **Decision Trees** – Tree-like models for classification/regression.
