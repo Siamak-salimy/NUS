@@ -11,7 +11,6 @@ Imagine you're panning for gold in a river. The river is your **massive dataset*
 3. **Classification** – Categorize data into predefined groups (e.g., spam vs. not spam).
 4. **Clustering** – Group similar data without predefined labels (e.g., customer segmentation).
 5. **Anomaly Detection** – Identify unusual records (e.g., fraud detection).
-
 ---
 ## Common Techniques:
 - **Association Rule Learning** (Market Basket Analysis) – Finds rules like "If A, then B."
