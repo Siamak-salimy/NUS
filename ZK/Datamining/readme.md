@@ -18,7 +18,6 @@ Imagine you're panning for gold in a river. The river is your **massive dataset*
 - **Neural Networks** – Deep learning for complex pattern recognition.
 - **Clustering Algorithms** (e.g., K-means) – Groups similar data points.
 - **Regression Analysis** – Predicts numerical values.
-
 ---
 
 ## Real-World Examples:
