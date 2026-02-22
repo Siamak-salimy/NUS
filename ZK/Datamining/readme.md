@@ -19,7 +19,6 @@ Imagine you're panning for gold in a river. The river is your **massive dataset*
 - **Clustering Algorithms** (e.g., K-means) – Groups similar data points.
 - **Regression Analysis** – Predicts numerical values.
 ---
-
 ## Real-World Examples:
 1. **Amazon Recommendations** – "Customers who bought this also bought…"
 2. **Netflix Movie Suggestions** – Based on viewing patterns.
