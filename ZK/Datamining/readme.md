@@ -24,7 +24,6 @@ Imagine you're panning for gold in a river. The river is your **massive dataset*
 2. **Netflix Movie Suggestions** – Based on viewing patterns.
 3. **Credit Scoring** – Banks predict default risk using transaction history.
 4. **Healthcare** – Identifying disease outbreaks from medical records.
-
 ---
 
 ## Data Mining vs Related Fields:
