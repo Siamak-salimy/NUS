@@ -1,7 +1,6 @@
 Bioinformatics is an interdisciplinary field that combines biology, computer science, mathematics, and statistics to analyze and interpret biological data. It plays a crucial role in advancing our understanding of complex biological systems. Here are some **special topics in bioinformatics** that are currently shaping the field:
 
 ---
-
 ### 1. **Genomics and Genome Analysis**
    - **Whole Genome Sequencing**: Analyzing entire genomes to identify genetic variations, mutations, and evolutionary relationships.
    - **Comparative Genomics**: Comparing genomes across species to understand evolutionary processes and identify conserved regions.
