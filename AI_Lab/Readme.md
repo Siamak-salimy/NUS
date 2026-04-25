@@ -1,5 +1,4 @@
 AI laboratory activities play a crucial role in advancing research, innovation, and practical applications of artificial intelligence. Here are some key reasons why they are important:
-
 ---
 
 ### 1. **Research and Development**
